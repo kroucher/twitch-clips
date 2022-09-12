@@ -10,7 +10,6 @@ const ClipPage = () => {
     }, {
         enabled: !!clip,
     });
-    console.log(router)
     return (
         <div className="w-screen bg-slate-900 text-white items-start flex justify-center min-h-screen pb-32">
 
@@ -23,7 +22,7 @@ const ClipPage = () => {
                 <div className="w-3/4 text-left py-8 px-4">
                     <span className="text-2xl sm:text-5xl whitespace-pre-wrap">{data?.[0]?.title}</span>
                 </div>
-                <iframe src={`${data?.[0]?.embed_url}&parent=${process.env.NODE_ENV === "production" ? `https://twitch-clips.beanlea.com` : `http://localhost:3000${router.asPath}`}`} height="720"
+                <iframe src={`${data?.[0]?.embed_url}&parent=twitch-clips.beanlea.com`} height="720"
                     width="1280"
                     allowFullScreen className="w-full mx-auto px-1" />
                 <div className="flex items-center justify-between w-full px-3">
