@@ -64,15 +64,7 @@ const RangeSlider = ({ rangeValue, setRangeValue }: { rangeValue: number[], setR
                 className="relative flex items-center select-none touch-none w-96 "
                 value={rangeValue}
                 onValueChange={(val) => {
-                    setRangeValue(val)
-                    // hide both tooltips 3 seconds after the user has stopped dragging
-                    // setTimeout(() => {
-                    //     if (minTooltipRef.current && maxTooltipRef.current && conjoinedTooltipRef.current) {
-                    //         minTooltipRef.current.classList.add("hidden");
-                    //         maxTooltipRef.current.classList.add("hidden");
-                    //     }
-                    // }
-                    //     , 2000);
+                    setRangeValue(val);
                 }}
                 onMouseLeave={() => {
                     setTimeout(() => {
@@ -106,15 +98,15 @@ const RangeSlider = ({ rangeValue, setRangeValue }: { rangeValue: number[], setR
                 <Slider.Thumb className="block w-6 h-6 bg-slate-500 shadow rounded-[50%] cursor-grab" ref={maxThumbRef} />
             </Slider.Root>
             <div className="fixed top-0 left-1" ref={minTooltipRef}>
-                <div className="bg-white text-slate-900 p-2 rounded">{rangeValue[0]}s</div>
+                <div className="bg-slate-700 text-white p-2 rounded">{rangeValue[0]}s</div>
                 <div className="bg-slate-500 w-3 h-3 -translate-y-1.5 rotate-45 m-auto" />
             </div>
             <div className="fixed top-0 left-0.5" ref={maxTooltipRef}>
-                <div className="bg-white text-slate-900 p-2 rounded">{rangeValue[1]}s</div>
+                <div className="bg-slate-700 text-white p-2 rounded">{rangeValue[1]}s</div>
                 <div className="bg-slate-500 w-3 h-3 -translate-y-1.5 rotate-45 m-auto" />
             </div>
             <div className="fixed top-0 left-0" ref={conjoinedTooltipRef} style={{ opacity: 0 }}>
-                <div className="bg-white text-slate-900 p-2 rounded">
+                <div className="bg-slate-700 text-white p-2 rounded">
                     {rangeValue[0]}s — {rangeValue[1]}s
                 </div>
             </div>
