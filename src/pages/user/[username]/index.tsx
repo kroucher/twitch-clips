@@ -13,6 +13,7 @@ import SortClips, { TimeFrame } from "../../../components/Clips/SortClips";
 import ClipCard from "../../../components/Clips/ClipCard";
 import RangeSlider from "../../../components/Clips/RangeSlider";
 import { PacmanLoader } from "react-spinners";
+import ScrollToTop from "../../../components/ScrollButton/ScrollToTop";
 
 
 
@@ -123,7 +124,11 @@ const UserPage = () => {
                         )
                     })}
                 </InfiniteScroll>
+
             </ul>
+
+            <ScrollToTop />
+
         </main>
     );
 }
