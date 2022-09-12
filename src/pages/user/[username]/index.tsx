@@ -82,7 +82,7 @@ const UserPage = () => {
                         <SearchBar setSearchTerm={setSearchTerm} />
                     </div>
                 </div>
-                <span className="text-4xl text-center py-4 capitalize">{username}&apos;s Clips</span>
+                <span className="text-4xl text-center py-4">{username}&apos;s Clips</span>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 p-4 pb-16 w-full px-4">
                 <SortClips
