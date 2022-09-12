@@ -29,7 +29,7 @@ export const streamerRouter = t.router({
           first: 10,
         });
         return {
-          streamers: streamers.data,
+          streamers: streamers.data.map((page) => page),
           cursor: streamers.pagination?.cursor,
         };
       } else {
@@ -43,7 +43,7 @@ export const streamerRouter = t.router({
             cursor = streamers.pagination.cursor;
           }
           return {
-            streamers: streamers.data,
+            streamers: streamers.data.map((page) => page),
             cursor: streamers.pagination?.cursor,
           };
         }

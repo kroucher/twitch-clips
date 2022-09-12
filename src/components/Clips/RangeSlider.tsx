@@ -102,8 +102,8 @@ const RangeSlider = ({ rangeValue, setRangeValue }: { rangeValue: number[], setR
                 <Slider.Track className="w-full bg-gray-600 relative flex-1 rounded-full h-2">
                     <Slider.Range className="absolute bg-slate-500 rounded-full h-full" />
                 </Slider.Track>
-                <Slider.Thumb className="block w-6 h-6 bg-slate-500 shadow rounded-[50%]" ref={minThumbRef} />
-                <Slider.Thumb className="block w-6 h-6 bg-slate-500 shadow rounded-[50%]" ref={maxThumbRef} />
+                <Slider.Thumb className="block w-6 h-6 bg-slate-500 shadow rounded-[50%] cursor-grab" ref={minThumbRef} />
+                <Slider.Thumb className="block w-6 h-6 bg-slate-500 shadow rounded-[50%] cursor-grab" ref={maxThumbRef} />
             </Slider.Root>
             <div className="fixed top-0 left-1" ref={minTooltipRef}>
                 <div className="bg-white text-slate-900 p-2 rounded">{rangeValue[0]}s</div>
