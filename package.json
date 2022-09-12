@@ -31,6 +31,7 @@
     "react-hover-video-player": "^9.7.0",
     "react-infinite-scroller": "^1.2.6",
     "react-spinners": "^0.13.4",
+    "react-twitch-embed": "^3.0.1",
     "remotion": "^3.2.14",
     "superjson": "^1.9.1",
     "zod": "^3.18.0"
