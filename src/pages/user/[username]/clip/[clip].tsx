@@ -22,7 +22,9 @@ const ClipPage = () => {
                 <div className="w-3/4 text-left py-8 px-4">
                     <span className="text-2xl sm:text-5xl whitespace-pre-wrap">{data?.[0]?.title}</span>
                 </div>
-                <iframe src={`${data?.[0]?.embed_url}&parent=twitch-clips.beanlea.com`} className="w-full min-h-[500px] mx-auto" />
+                <iframe src={`${data?.[0]?.embed_url}&parent=twitch-clips.beanlea.com`} height="720"
+                    width="1280"
+                    allowFullScreen className="w-full mx-auto px-1" />
                 <div className="flex items-center justify-between w-full px-3">
                     <span className="text-xl py-2">Views: {data?.[0]?.view_count}</span>
                     <span className="text-xl py-2">Duration: {data?.[0]?.duration}s</span>
