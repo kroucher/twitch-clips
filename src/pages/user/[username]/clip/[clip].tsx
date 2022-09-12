@@ -18,7 +18,7 @@ const ClipPage = () => {
                 </svg>
             </button>
 
-            <iframe src={data?.[0]?.embed_url} className="w-full max-w-4xl h-full" />
+            <iframe src={`${data?.[0]?.embed_url}&parent=twitch-clips.beanlea.com`} className="w-full max-w-4xl h-full" />
         </div>
     );
 }
