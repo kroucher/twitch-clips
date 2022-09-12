@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Clip } from "node-twitch/dist/types/objects";
-import { LegacyRef, useEffect, useRef, useState } from "react";
+import { LegacyRef, useEffect, useState } from "react";
 import { trpc } from "../../../utils/trpc";
 import { useSortClips } from "../../../utils/useSortClips";
 import InfiniteScroll from 'react-infinite-scroller';
@@ -14,8 +13,6 @@ import ClipCard from "../../../components/Clips/ClipCard";
 import RangeSlider from "../../../components/Clips/RangeSlider";
 import { PacmanLoader } from "react-spinners";
 import ScrollToTop from "../../../components/ScrollButton/ScrollToTop";
-
-
 
 const loader = (
     <div className="col-span-1 sm:col-span-4 mx-auto">
@@ -61,6 +58,7 @@ const UserPage = () => {
                 setSearchResults([]);
             }
         },
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         [debouncedSearchResults] // Only call effect if debounced search term changes
     );
 

@@ -13,7 +13,7 @@ const Home: NextPage = () => {
   const [search, setSearch] = useState("");
   const [streamers, setStreamers] = useState<Channel[]>([]);
   const debouncedSearchResults = useDebounce(search, 500);
-  const { data, status, fetchNextPage, hasNextPage, isFetching } = trpc.streamers.searchStreamers.useInfiniteQuery({
+  const { status, fetchNextPage, hasNextPage, isFetching } = trpc.streamers.searchStreamers.useInfiniteQuery({
     query: search,
   }, {
     getNextPageParam: (lastPage) => lastPage?.cursor,
@@ -31,6 +31,7 @@ const Home: NextPage = () => {
         setStreamers([]);
       }
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [debouncedSearchResults] // Only call effect if debounced search term changes
   );
 

@@ -1,6 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
 import { SortBy } from "../../utils/useSortClips";
-import RangeSlider from "./RangeSlider";
 
 export type TimeFrame = "24hr" | "7days" | "30days" | "all";
 

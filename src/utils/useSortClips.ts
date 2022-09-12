@@ -1,4 +1,3 @@
-import { Clip } from "node-twitch/dist/types/objects";
 import { useEffect, useState } from "react";
 import { TwitchClip } from "../server/trpc/router/clipsRouter";
 

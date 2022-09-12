@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import * as Slider from '@radix-ui/react-slider';
 
 const RangeSlider = ({ rangeValue, setRangeValue }: { rangeValue: number[], setRangeValue: (value: number[]) => void }) => {
