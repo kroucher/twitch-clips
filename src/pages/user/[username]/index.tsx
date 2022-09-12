@@ -84,7 +84,7 @@ const UserPage = () => {
                 </div>
                 <span className="text-4xl text-center py-4 capitalize">{username}&apos;s Clips</span>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-4 gap-2 p-2 pb-16">
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 p-4 pb-16 w-full px-4">
                 <SortClips
                     setSortBy={setSortBy}
                     setSortDirection={setSortDirection}
@@ -101,7 +101,7 @@ const UserPage = () => {
                     loadMore={() => fetchNextPage()}
                     hasMore={hasNextPage}
                     loader={loader}
-                    className="grid grid-cols-1 sm:grid-cols-4 gap-2 p-2 pb-16"
+                    className="grid grid-cols-1 sm:grid-cols-4 gap-4 p-2 pb-16 w-screen px-4"
                 >
                     {searchResults.length > 0 ? searchResults.filter((clip) => {
                         return (debouncedRange?.[0] !== undefined && clip.duration >= debouncedRange?.[0]) && (debouncedRange?.[1] !== undefined && clip.duration <= debouncedRange?.[1]);

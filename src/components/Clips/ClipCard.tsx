@@ -25,7 +25,7 @@ const ClipCard = ({ clip, i }: { clip: TwitchClip, i: number }) => {
                                 minute: 'numeric',
                             }).format(new Date(clip.created_at))}</span>
                             <span className="group-hover:hidden hidden xl:block sm:absolute bottom-0.5 left-0.5 text-xs rounded-lg w-fit text-center p-1 h-fit bg-slate-900/70 text-white z-10 whitespace-nowrap">{clip.view_count} views</span>
-                            <span className="group-hover:hidden absolute xl:hidden top-0 left-0.5 text-xs rounded-lg w-fit text-center p-1 h-fit bg-slate-900/70 text-white z-10 whitespace-nowrap">{clip.view_count} views</span>
+                            <span className="group-hover:hidden absolute xl:hidden top-0.5 left-0.5 text-xs rounded-lg w-fit text-center p-1 h-fit bg-slate-900/70 text-white z-10 whitespace-nowrap">{clip.view_count} views</span>
                         </div>
                         <p className="text-sm truncate text-ellipsis w-48 group-hover:w-full h-12 group-hover:whitespace-pre-line font-bold pt-2">{clip.title}</p>
                         <p className="text-xs pt-2">Clipped by: {clip.creator_name}</p>
