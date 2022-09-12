@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const ScrollToTop = () => {
 
@@ -15,13 +15,17 @@ const ScrollToTop = () => {
     };
 
     const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        if (window !== undefined) {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
     };
-
-    window.addEventListener('scroll', toggleVisible);
+    useEffect(() => {
+        window.addEventListener('scroll', toggleVisible);
+        return () => window.removeEventListener('scroll', toggleVisible);
+    }, []);
 
     return (
         <button onClick={scrollToTop} className={`${visible ? 'fixed bottom-[5%] right-[15%] sm:right-[5%] w-12 h-12 sm:w-10 sm:h-10 rounded-full z-10 border-2 bg-black/60 border-white flex items-center justify-center text-white' : ''}`}>
