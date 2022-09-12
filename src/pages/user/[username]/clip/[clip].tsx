@@ -10,6 +10,7 @@ const ClipPage = () => {
     }, {
         enabled: !!clip,
     });
+    console.log(router)
     return (
         <div className="w-screen bg-slate-900 text-white items-start flex justify-center min-h-screen pb-32">
 
@@ -18,11 +19,11 @@ const ClipPage = () => {
                     <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
             </button>
-            <div className="flex flex-col items-start justify-center pt-28">
+            <div className="flex flex-col items-start justify-center pt-28 w-full">
                 <div className="w-3/4 text-left py-8 px-4">
                     <span className="text-2xl sm:text-5xl whitespace-pre-wrap">{data?.[0]?.title}</span>
                 </div>
-                <iframe src={`${data?.[0]?.embed_url}&parent=twitch-clips.beanlea.com`} height="720"
+                <iframe src={`${data?.[0]?.embed_url}&parent=${process.env.NODE_ENV === "production" ? `https://twitch-clips.beanlea.com` : `http://localhost:3000${router.asPath}`}`} height="720"
                     width="1280"
                     allowFullScreen className="w-full mx-auto px-1" />
                 <div className="flex items-center justify-between w-full px-3">
