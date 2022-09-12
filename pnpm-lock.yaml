@@ -36,6 +36,7 @@ specifiers:
   remotion: ^3.2.14
   superjson: ^1.9.1
   tailwindcss: ^3.1.6
+  twitch-m3u8: ^1.1.5
   typescript: 4.7.4
   zod: ^3.18.0
 
@@ -64,6 +65,7 @@ dependencies:
   react-twitch-embed: 3.0.1_biqbaboplfbrettd7655fr4n2y
   remotion: 3.2.14_biqbaboplfbrettd7655fr4n2y
   superjson: 1.9.1
+  twitch-m3u8: 1.1.5
   zod: 3.19.0
 
 devDependencies:
@@ -2687,6 +2689,10 @@ packages:
       tslib: 1.14.1
       typescript: 4.7.4
     dev: true
+
+  /twitch-m3u8/1.1.5:
+    resolution: {integrity: sha512-o037ePS9fwfuOmBe/ftji/e3cqzWq50AUvuIHJZ5E0pV73UMjn3BAm00aZUYVrt3Ns6k08HvhVjAIya/WYcGRg==}
+    dev: false
 
   /type-check/0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}

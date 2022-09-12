@@ -1,4 +1,3 @@
-import Image from "next/future/image";
 import Link from "next/link";
 import { TwitchClip } from "../../server/trpc/router/clipsRouter";
 
@@ -15,7 +14,8 @@ const ClipCard = ({ clip, i }: { clip: TwitchClip, i: number }) => {
                         href={`/user/${clip.broadcaster_name}/clip/${clip.id}`}
                     >
                         <div className="relative w-full">
-                            <Image width={1920} height={1080} alt={clip.title} src={clip.thumbnail_url} className="w-full" />
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img width={1920} height={1080} alt={clip.title} src={clip.thumbnail_url} className="w-full" />
                             <span className="group-hover:hidden absolute top-0.5 right-0.5 text-xs rounded-lg w-fit text-center p-1 bg-slate-900/70 text-white z-10">{clip.duration}s</span>
                             <span className="group-hover:hidden absolute bottom-0.5 right-0.5 text-xs rounded-lg w-fit p-1 bg-slate-900/70 text-white z-10">{new Intl.DateTimeFormat('en-US', {
                                 year: 'numeric',

@@ -34,6 +34,7 @@
     "react-twitch-embed": "^3.0.1",
     "remotion": "^3.2.14",
     "superjson": "^1.9.1",
+    "twitch-m3u8": "^1.1.5",
     "zod": "^3.18.0"
   },
   "devDependencies": {

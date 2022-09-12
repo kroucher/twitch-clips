@@ -13,6 +13,7 @@ import ClipCard from "../../../components/Clips/ClipCard";
 import RangeSlider from "../../../components/Clips/RangeSlider";
 import { PacmanLoader } from "react-spinners";
 import ScrollToTop from "../../../components/ScrollButton/ScrollToTop";
+import twitch from "twitch-m3u8"
 
 const loader = (
     <div className="col-span-1 sm:col-span-4 mx-auto">
@@ -48,6 +49,9 @@ const UserPage = () => {
             },
         },
     );
+    twitch.getVod("1584667645")
+        .then((data: any) => console.log(data))
+        .catch((err: any) => console.error(err));
     const { sortClips, setSortDirection, setSortBy, sortedBy, sortedDirection } = useSortClips(clips, "created_at", "desc");
 
     useEffect(
