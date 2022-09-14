@@ -5,7 +5,7 @@ import { Clip } from "node-twitch/dist/types/objects";
 
 const twitch = new TwitchApi({
   client_id: "rx71gqrwwb19qcuc31d2sp2jzrydl7",
-  client_secret: "evsr9ofnmg6iw9dd6nrym0cvahswnq",
+  client_secret: process.env.TWITCH_SECRET as string,
 });
 
 export interface TwitchClip extends Clip {
